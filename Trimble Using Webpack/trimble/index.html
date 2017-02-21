@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html data-ng-app="SNM941" data-ng-controller="mainCtrl as mactrl">
+
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <link rel='stylesheet' href='../src/css/app-bootstrap.css'>
+	    <link rel='stylesheet' href='../src/css/app.css'>
+	    <link rel='stylesheet' href='../src/css/trimble.css'>
+	    <link rel='stylesheet' href='../src/css/trimble.2.css'>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	</head>
+
+	<body class='sw-toggled'>
+	    <header id="header" data-current-skin="trimble-yellow" data-ng-include src="'./src/modules/header/header.tpl.html'"></header>
+	    <section id="main">
+	        <aside id="sidebar" data-ng-include src="'./src/modules/sidenav/left-sidenav.tpl.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
+	        <section id="content">
+	            <ui-view></ui-view>
+	        </section>
+	    </section>
+	<script type="text/javascript" src="app/bundle.js"></script></body>
+
+</html>
